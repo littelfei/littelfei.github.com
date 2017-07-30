@@ -3,9 +3,14 @@
   
     
     <entry>
-      <title><![CDATA[Hexo搭建好博客环境后上传报错]]></title>
+      <title><![CDATA[Hexo运行hexo d -g报错]]></title>
       <url>/2017/07/30/article-title/</url>
-      <content type="html"><![CDATA[<p><img src="img/pusherror.png" alt="remote: error: GH007: Your push would publish a private email address"></p>
+      <content type="html"><![CDATA[<p><img src="img/pusherror.png" alt="remote: error: GH007: Your push would publish a private email address"><br></p>
+<h2 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h2><pre><code>1、登录GitHub，打开Settings &gt; Emails，或者打开https://github.com/settings/emails
+2、选择Keep my email address private
+3、取消选择Block command line pushes that expose my email
+</code></pre><p><img src="img/setemail.png" alt=""></p>
+<p>重新运行<code>hexo d -g</code> ok</p>
 ]]></content>
       
         <categories>

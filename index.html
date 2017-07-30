@@ -79,7 +79,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/07/30/article-title/" title="Hexo搭建好博客环境后上传报错" itemprop="url">Hexo搭建好博客环境后上传报错</a>
+      <a href="/2017/07/30/article-title/" title="Hexo运行hexo d -g报错" itemprop="url">Hexo运行hexo d -g报错</a>
   </h1>
   <p class="article-author">By
        
@@ -92,7 +92,12 @@
 </header>
     <div class="article-content">
         
-        <p><img src="img/pusherror.png" alt="remote: error: GH007: Your push would publish a private email address"></p>
+        <p><img src="img/pusherror.png" alt="remote: error: GH007: Your push would publish a private email address"><br></p>
+<h2 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h2><pre><code>1、登录GitHub，打开Settings &gt; Emails，或者打开https://github.com/settings/emails
+2、选择Keep my email address private
+3、取消选择Block command line pushes that expose my email
+</code></pre><p><img src="img/setemail.png" alt=""></p>
+<p>重新运行<code>hexo d -g</code> ok</p>
 
         
         

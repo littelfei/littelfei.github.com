@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://littelfei.github.io/"/>
-  <updated>2017-07-30T16:00:17.709Z</updated>
+  <updated>2017-07-30T16:13:44.256Z</updated>
   <id>http://littelfei.github.io/</id>
   
   <author>
@@ -16,19 +16,24 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hexo搭建好博客环境后上传报错</title>
+    <title>Hexo运行hexo d -g报错</title>
     <link href="http://littelfei.github.io/2017/07/30/article-title/"/>
     <id>http://littelfei.github.io/2017/07/30/article-title/</id>
     <published>2017-07-30T11:10:35.000Z</published>
-    <updated>2017-07-30T16:00:17.709Z</updated>
+    <updated>2017-07-30T16:13:44.256Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="img/pusherror.png" alt="remote: error: GH007: Your push would publish a private email address"></p>
+    <content type="html"><![CDATA[<p><img src="img/pusherror.png" alt="remote: error: GH007: Your push would publish a private email address"><br></p>
+<h2 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h2><pre><code>1、登录GitHub，打开Settings &gt; Emails，或者打开https://github.com/settings/emails
+2、选择Keep my email address private
+3、取消选择Block command line pushes that expose my email
+</code></pre><p><img src="img/setemail.png" alt=""></p>
+<p>重新运行<code>hexo d -g</code> ok</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;img/pusherror.png&quot; alt=&quot;remote: error: GH007: Your push would publish a private email address&quot;&gt;&lt;/p&gt;
-
+      &lt;p&gt;&lt;img src=&quot;img/pusherror.png&quot; alt=&quot;remote: error: GH007: Your push would publish a private email address&quot;&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h2 id=&quot;解决办法：&quot;&gt;&lt;a href=
     
     </summary>
     
