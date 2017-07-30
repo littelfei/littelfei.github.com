@@ -3,9 +3,9 @@
   
     
     <entry>
-      <title><![CDATA[article title]]></title>
+      <title><![CDATA[Hexo搭建好博客环境后上传报错]]></title>
       <url>/2017/07/30/article-title/</url>
-      <content type="html"><![CDATA[<p>htrhrthrthrtjrtjrtf</p>
+      <content type="html"><![CDATA[<p><img src="img/pusherror.png" alt="remote: error: GH007: Your push would publish a private email address"></p>
 ]]></content>
       
         <categories>

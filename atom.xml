@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://littelfei.github.io/"/>
-  <updated>2017-07-30T15:50:04.092Z</updated>
+  <updated>2017-07-30T16:00:17.709Z</updated>
   <id>http://littelfei.github.io/</id>
   
   <author>
@@ -16,18 +16,18 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>article title</title>
+    <title>Hexo搭建好博客环境后上传报错</title>
     <link href="http://littelfei.github.io/2017/07/30/article-title/"/>
     <id>http://littelfei.github.io/2017/07/30/article-title/</id>
     <published>2017-07-30T11:10:35.000Z</published>
-    <updated>2017-07-30T15:50:04.092Z</updated>
+    <updated>2017-07-30T16:00:17.709Z</updated>
     
-    <content type="html"><![CDATA[<p>htrhrthrthrtjrtjrtf</p>
+    <content type="html"><![CDATA[<p><img src="img/pusherror.png" alt="remote: error: GH007: Your push would publish a private email address"></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;htrhrthrthrtjrtjrtf&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;img/pusherror.png&quot; alt=&quot;remote: error: GH007: Your push would publish a private email address&quot;&gt;&lt;/p&gt;
 
     
     </summary>
