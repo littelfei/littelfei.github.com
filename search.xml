@@ -5,8 +5,13 @@
     <entry>
       <title><![CDATA[JavaScript事件委派]]></title>
       <url>/2017/08/13/JavaScript%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%B4%BE/</url>
-      <content type="html"><![CDATA[<p>```&lt;!DOCTYPE html&gt;</p>
-<html><br><head><br>    <title></title><br></head><br><body><br>    <ul id="list" style="border: 1px solid red;width:200px;"><br>        <li>1111</li><br>        <li>2222</li><br>        <li>3333</li><br>        <li>4444</li><br>    </ul><br></body><br></html>]]></content>
+      <content type="html"><![CDATA[<pre><code>&lt;ul id=&quot;list&quot; style=&quot;border: 1px solid red;width:200px;&quot;&gt;
+    &lt;li&gt;1111&lt;/li&gt;
+    &lt;li&gt;2222&lt;/li&gt;
+    &lt;li&gt;3333&lt;/li&gt;
+    &lt;li&gt;4444&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>]]></content>
       
         <categories>
             
