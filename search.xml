@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title><![CDATA[JavaScript事件委派]]></title>
+      <url>/2017/08/13/JavaScript%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%B4%BE/</url>
+      <content type="html"><![CDATA[<p>```&lt;!DOCTYPE html&gt;</p>
+<html><br><head><br>    <title></title><br></head><br><body><br>    <ul id="list" style="border: 1px solid red;width:200px;"><br>        <li>1111</li><br>        <li>2222</li><br>        <li>3333</li><br>        <li>4444</li><br>    </ul><br></body><br></html>]]></content>
+      
+        <categories>
+            
+            <category> JavaScript </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 事件委派 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hexo运行hexo d -g报错]]></title>
       <url>/2017/07/30/hexo-2017-7-30/</url>
       <content type="html"><![CDATA[<p><img src="img/pusherror.png" alt="remote: error: GH007: Your push would publish a private email address"><br></p>

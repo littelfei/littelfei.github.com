@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://littelfei.github.io/"/>
-  <updated>2017-07-30T16:15:55.145Z</updated>
+  <updated>2017-08-13T12:58:21.782Z</updated>
   <id>http://littelfei.github.io/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript事件委派</title>
+    <link href="http://littelfei.github.io/2017/08/13/JavaScript%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%B4%BE/"/>
+    <id>http://littelfei.github.io/2017/08/13/JavaScript事件委派/</id>
+    <published>2017-08-13T12:49:38.000Z</published>
+    <updated>2017-08-13T12:58:21.782Z</updated>
+    
+    <content type="html"><![CDATA[<p>```&lt;!DOCTYPE html&gt;</p>
+<html><br><head><br>    <title></title><br></head><br><body><br>    <ul id="list" style="border: 1px solid red;width:200px;"><br>        <li>1111</li><br>        <li>2222</li><br>        <li>3333</li><br>        <li>4444</li><br>    </ul><br></body><br></html>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;```&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;
+&lt;html&gt;&lt;br&gt;&lt;head&gt;&lt;br&gt;    &lt;title&gt;&lt;/title&gt;&lt;br&gt;&lt;/head&gt;&lt;br&gt;&lt;body&gt;&lt;br&gt;    &lt;ul id=&quot;list&quot; style=&quot;border: 1px solid r
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://littelfei.github.io/categories/JavaScript/"/>
+    
+    
+      <category term="事件委派" scheme="http://littelfei.github.io/tags/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%B4%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo运行hexo d -g报错</title>
