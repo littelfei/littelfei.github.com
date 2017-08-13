@@ -92,13 +92,26 @@
 </header>
     <div class="article-content">
         
-        <pre><code>&lt;ul id=&quot;list&quot; style=&quot;border: 1px solid red;width:200px;&quot;&gt;
+        <p><strong><code>事件委派</code>的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素。</strong></p>
+<blockquote>
+<p>一个简单的例子：给ul中的li添加点击事件</p>
+</blockquote>
+<pre><code>&lt;ul id=&quot;list&quot; style=&quot;width:200px;border: 1px solid red;&quot;&gt;
     &lt;li&gt;1111&lt;/li&gt;
     &lt;li&gt;2222&lt;/li&gt;
     &lt;li&gt;3333&lt;/li&gt;
     &lt;li&gt;4444&lt;/li&gt;
 &lt;/ul&gt;
-</code></pre>
+</code></pre><p><br></p>
+<blockquote>
+<p>传统的li点击事件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> oLi = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"li"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; oLi.length; i++) &#123;</div><div class="line">    oLi[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.innerHTML);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p><br></p>
+<blockquote>
+<p>利用事件委派方法添加点击事件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> oUl = <span class="built_in">document</span>.getElementById(<span class="string">"list"</span>);</div><div class="line">        </div><div class="line">oUl.onclick = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> target = e.target || e.srcElement;</div><div class="line">    <span class="built_in">console</span>.log(target.innerHTML);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p><code>事件委派</code>的好处就是不在进行查询，减少了DOM操作，极大地改善了代码性能。</p>
+
         
         
         <p class="article-more-link">
