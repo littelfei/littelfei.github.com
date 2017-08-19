@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://littelfei.github.io/"/>
-  <updated>2017-08-13T13:20:43.970Z</updated>
+  <updated>2017-08-19T12:49:53.830Z</updated>
   <id>http://littelfei.github.io/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS书写顺序</title>
+    <link href="http://littelfei.github.io/2017/08/19/CSS%E4%B9%A6%E5%86%99%E9%A1%BA%E5%BA%8F/"/>
+    <id>http://littelfei.github.io/2017/08/19/CSS书写顺序/</id>
+    <published>2017-08-19T12:44:10.000Z</published>
+    <updated>2017-08-19T12:49:53.830Z</updated>
+    
+    <content type="html"><![CDATA[<ol>
+<li>Display &amp; Flow</li>
+<li>Positioning</li>
+<li>Dimensions</li>
+<li>Margins, Padding, Borders, Outline</li>
+<li>Typographic Styles</li>
+<li>Backgrounds</li>
+<li>Opacity, Cursors, Generated Content</li>
+</ol>
+<p><strong>例子：</strong><br> <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">el</span> &#123;</div><div class="line">    <span class="attribute">display</span>: ;</div><div class="line">    <span class="attribute">visibility</span>: ;</div><div class="line">    <span class="attribute">float</span>: ;</div><div class="line">    <span class="attribute">clear</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">position</span>: ;</div><div class="line">    <span class="attribute">top</span>: ;</div><div class="line">    <span class="attribute">right</span>: ;</div><div class="line">    <span class="attribute">bottom</span>: ;</div><div class="line">    <span class="attribute">left</span>: ;</div><div class="line">    <span class="attribute">z-index</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">width</span>: ;</div><div class="line">    <span class="attribute">min-width</span>: ;</div><div class="line">    <span class="attribute">max-width</span>: ;</div><div class="line">    <span class="attribute">height</span>: ;</div><div class="line">    <span class="attribute">min-height</span>: ;</div><div class="line">    <span class="attribute">max-height</span>: ;</div><div class="line">    <span class="attribute">overflow</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">margin</span>: ;</div><div class="line">    <span class="attribute">margin-top</span>: ;</div><div class="line">    <span class="attribute">margin-right</span>: ;</div><div class="line">    <span class="attribute">margin-bottom</span>: ;</div><div class="line">    <span class="attribute">margin-left</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">padding</span>: ;</div><div class="line">    <span class="attribute">padding-top</span>: ;</div><div class="line">    <span class="attribute">padding-right</span>: ;</div><div class="line">    <span class="attribute">padding-bottom</span>: ;</div><div class="line">    <span class="attribute">padding-left</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">border</span>: ;</div><div class="line">    <span class="attribute">border-top</span>: ;</div><div class="line">    <span class="attribute">border-right</span>: ;</div><div class="line">    <span class="attribute">border-bottom</span>: ;</div><div class="line">    <span class="attribute">border-left</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">border-width</span>: ;</div><div class="line">    <span class="attribute">border-top-width</span>: ;</div><div class="line">    <span class="attribute">border-right-width</span>: ;</div><div class="line">    <span class="attribute">border-bottom-width</span>: ;</div><div class="line">    <span class="attribute">border-left-width</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">border-style</span>: ;</div><div class="line">    <span class="attribute">border-top-style</span>: ;</div><div class="line">    <span class="attribute">border-right-style</span>: ;</div><div class="line">    <span class="attribute">border-bottom-style</span>: ;</div><div class="line">    <span class="attribute">border-left-style</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">border-color</span>: ;</div><div class="line">    <span class="attribute">border-top-color</span>: ;</div><div class="line">    <span class="attribute">border-right-color</span>: ;</div><div class="line">    <span class="attribute">border-bottom-color</span>: ;</div><div class="line">    <span class="attribute">border-left-color</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">outline</span>: ;</div><div class="line">    <span class="attribute">list-style</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">table-layout</span>: ;</div><div class="line">    <span class="attribute">caption-side</span>: ;</div><div class="line">    <span class="attribute">border-collapse</span>: ;</div><div class="line">    <span class="attribute">border-spacing</span>: ;</div><div class="line">    <span class="attribute">empty-cells</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">font</span>: ;</div><div class="line">    <span class="attribute">font-family</span>: ;</div><div class="line">    <span class="attribute">font-size</span>: ;</div><div class="line">    <span class="attribute">line-height</span>: ;</div><div class="line">    <span class="attribute">font-weight</span>: ;</div><div class="line">    <span class="attribute">text-align</span>: ;</div><div class="line">    <span class="attribute">text-indent</span>: ;</div><div class="line">    <span class="attribute">text-transform</span>: ;</div><div class="line">    <span class="attribute">text-decoration</span>: ;</div><div class="line">    <span class="attribute">letter-spacing</span>: ;</div><div class="line">    <span class="attribute">word-spacing</span>: ;</div><div class="line">    <span class="attribute">white-space</span>: ;</div><div class="line">    <span class="attribute">vertical-align</span>: ;</div><div class="line">    <span class="attribute">color</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">background</span>: ;</div><div class="line">    <span class="attribute">background-color</span>: ;</div><div class="line">    <span class="attribute">background-image</span>: ;</div><div class="line">    <span class="attribute">background-repeat</span>: ;</div><div class="line">    <span class="attribute">background-position</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">opacity</span>: ;</div><div class="line">    <span class="attribute">cursor</span>: ;</div><div class="line">    <span class="attribute">content</span>: ;</div><div class="line">    <span class="attribute">quotes</span>: ;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;Display &amp;amp; Flow&lt;/li&gt;
+&lt;li&gt;Positioning&lt;/li&gt;
+&lt;li&gt;Dimensions&lt;/li&gt;
+&lt;li&gt;Margins, Padding, Borders, Outline&lt;/li&gt;
+&lt;li&gt;Typographic Styles
+    
+    </summary>
+    
+      <category term="css" scheme="http://littelfei.github.io/categories/css/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>JavaScript事件委派</title>

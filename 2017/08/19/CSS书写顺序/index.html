@@ -4,20 +4,24 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Littelfei&#39;s Blog</title>
+    <title>CSS书写顺序 | Littelfei&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="qin">
     
 
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Littelfei&#39;s Blog">
-<meta property="og:url" content="http://littelfei.github.io/index.html">
+    <meta name="description" content="Display &amp;amp; Flow Positioning Dimensions Margins, Padding, Borders, Outline Typographic Styles Backgrounds Opacity, Cursors, Generated Content  例子： 12345678910111213141516171819202122232425262728293">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS书写顺序">
+<meta property="og:url" content="http://littelfei.github.io/2017/08/19/CSS书写顺序/index.html">
 <meta property="og:site_name" content="Littelfei&#39;s Blog">
+<meta property="og:description" content="Display &amp;amp; Flow Positioning Dimensions Margins, Padding, Borders, Outline Typographic Styles Backgrounds Opacity, Cursors, Generated Content  例子： 12345678910111213141516171819202122232425262728293">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-08-19T12:49:53.830Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Littelfei&#39;s Blog">
+<meta name="twitter:title" content="CSS书写顺序">
+<meta name="twitter:description" content="Display &amp;amp; Flow Positioning Dimensions Margins, Padding, Borders, Outline Typographic Styles Backgrounds Opacity, Cursors, Generated Content  例子： 12345678910111213141516171819202122232425262728293">
 
     
     <link rel="alternative" href="/atom.xml" title="Littelfei&#39;s Blog" type="application/atom+xml">
@@ -71,12 +75,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2017/08/19/CSS书写顺序/" title="CSS书写顺序" itemprop="url">CSS书写顺序</a>
@@ -90,9 +92,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <ol>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<ol>
 <li>Display &amp; Flow</li>
 <li>Positioning</li>
 <li>Dimensions</li>
@@ -102,14 +111,9 @@
 <li>Opacity, Cursors, Generated Content</li>
 </ol>
 <p><strong>例子：</strong><br> <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">el</span> &#123;</div><div class="line">    <span class="attribute">display</span>: ;</div><div class="line">    <span class="attribute">visibility</span>: ;</div><div class="line">    <span class="attribute">float</span>: ;</div><div class="line">    <span class="attribute">clear</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">position</span>: ;</div><div class="line">    <span class="attribute">top</span>: ;</div><div class="line">    <span class="attribute">right</span>: ;</div><div class="line">    <span class="attribute">bottom</span>: ;</div><div class="line">    <span class="attribute">left</span>: ;</div><div class="line">    <span class="attribute">z-index</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">width</span>: ;</div><div class="line">    <span class="attribute">min-width</span>: ;</div><div class="line">    <span class="attribute">max-width</span>: ;</div><div class="line">    <span class="attribute">height</span>: ;</div><div class="line">    <span class="attribute">min-height</span>: ;</div><div class="line">    <span class="attribute">max-height</span>: ;</div><div class="line">    <span class="attribute">overflow</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">margin</span>: ;</div><div class="line">    <span class="attribute">margin-top</span>: ;</div><div class="line">    <span class="attribute">margin-right</span>: ;</div><div class="line">    <span class="attribute">margin-bottom</span>: ;</div><div class="line">    <span class="attribute">margin-left</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">padding</span>: ;</div><div class="line">    <span class="attribute">padding-top</span>: ;</div><div class="line">    <span class="attribute">padding-right</span>: ;</div><div class="line">    <span class="attribute">padding-bottom</span>: ;</div><div class="line">    <span class="attribute">padding-left</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">border</span>: ;</div><div class="line">    <span class="attribute">border-top</span>: ;</div><div class="line">    <span class="attribute">border-right</span>: ;</div><div class="line">    <span class="attribute">border-bottom</span>: ;</div><div class="line">    <span class="attribute">border-left</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">border-width</span>: ;</div><div class="line">    <span class="attribute">border-top-width</span>: ;</div><div class="line">    <span class="attribute">border-right-width</span>: ;</div><div class="line">    <span class="attribute">border-bottom-width</span>: ;</div><div class="line">    <span class="attribute">border-left-width</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">border-style</span>: ;</div><div class="line">    <span class="attribute">border-top-style</span>: ;</div><div class="line">    <span class="attribute">border-right-style</span>: ;</div><div class="line">    <span class="attribute">border-bottom-style</span>: ;</div><div class="line">    <span class="attribute">border-left-style</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">border-color</span>: ;</div><div class="line">    <span class="attribute">border-top-color</span>: ;</div><div class="line">    <span class="attribute">border-right-color</span>: ;</div><div class="line">    <span class="attribute">border-bottom-color</span>: ;</div><div class="line">    <span class="attribute">border-left-color</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">outline</span>: ;</div><div class="line">    <span class="attribute">list-style</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">table-layout</span>: ;</div><div class="line">    <span class="attribute">caption-side</span>: ;</div><div class="line">    <span class="attribute">border-collapse</span>: ;</div><div class="line">    <span class="attribute">border-spacing</span>: ;</div><div class="line">    <span class="attribute">empty-cells</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">font</span>: ;</div><div class="line">    <span class="attribute">font-family</span>: ;</div><div class="line">    <span class="attribute">font-size</span>: ;</div><div class="line">    <span class="attribute">line-height</span>: ;</div><div class="line">    <span class="attribute">font-weight</span>: ;</div><div class="line">    <span class="attribute">text-align</span>: ;</div><div class="line">    <span class="attribute">text-indent</span>: ;</div><div class="line">    <span class="attribute">text-transform</span>: ;</div><div class="line">    <span class="attribute">text-decoration</span>: ;</div><div class="line">    <span class="attribute">letter-spacing</span>: ;</div><div class="line">    <span class="attribute">word-spacing</span>: ;</div><div class="line">    <span class="attribute">white-space</span>: ;</div><div class="line">    <span class="attribute">vertical-align</span>: ;</div><div class="line">    <span class="attribute">color</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">background</span>: ;</div><div class="line">    <span class="attribute">background-color</span>: ;</div><div class="line">    <span class="attribute">background-image</span>: ;</div><div class="line">    <span class="attribute">background-repeat</span>: ;</div><div class="line">    <span class="attribute">background-position</span>: ;</div><div class="line"> </div><div class="line">    <span class="attribute">opacity</span>: ;</div><div class="line">    <span class="attribute">cursor</span>: ;</div><div class="line">    <span class="attribute">content</span>: ;</div><div class="line">    <span class="attribute">quotes</span>: ;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
@@ -122,167 +126,66 @@
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
+	<div class="share-jiathis">
+	  
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_googleplus"></a>
+	<a class="jiathis_button_douban"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
 </div>
+<script type="text/javascript" >
+    var jiathis_config={
+    data_track_clickback:true,
+    sm:"copy,renren,cqq",
+    pic:"",
+    summary:"",
+    
+  </script> 
+<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=
+2140428" charset="utf-8"></script>      
+
+	 </div>
+	
+	</div>
+
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/08/13/JavaScript事件委派/" title="JavaScript事件委派" itemprop="url">JavaScript事件委派</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="qin" target="_blank" itemprop="author">qin</a>
-		
-  <p class="article-time">
-    <time datetime="2017-08-13T12:49:38.000Z" itemprop="datePublished"> 发表于 2017-08-13</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><strong><code>事件委派</code>的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素。</strong></p>
-<blockquote>
-<p>一个简单的例子：给ul中的li添加点击事件</p>
-</blockquote>
-<pre><code>&lt;ul id=&quot;list&quot; style=&quot;width:200px;border: 1px solid red;&quot;&gt;
-    &lt;li&gt;1111&lt;/li&gt;
-    &lt;li&gt;2222&lt;/li&gt;
-    &lt;li&gt;3333&lt;/li&gt;
-    &lt;li&gt;4444&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre><p><br></p>
-<blockquote>
-<p>传统的li点击事件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> oLi = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"li"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; oLi.length; i++) &#123;</div><div class="line">    oLi[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.innerHTML);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<p><br></p>
-<blockquote>
-<p>利用事件委派方法添加点击事件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> oUl = <span class="built_in">document</span>.getElementById(<span class="string">"list"</span>);</div><div class="line">        </div><div class="line">oUl.onclick = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> target = e.target || e.srcElement;</div><div class="line">    <span class="built_in">console</span>.log(target.innerHTML);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<p><code>事件委派</code>的好处就是不在进行查询，减少了DOM操作，极大地改善了代码性能。</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/事件委派/">事件委派</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2017/08/13/JavaScript事件委派/"  title="JavaScript事件委派">
+ <strong>下一篇：</strong><br/> 
+ <span>JavaScript事件委派
+</span>
+</a>
 </div>
 
-</footer>
+</nav>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/07/30/hexo-2017-7-30/" title="Hexo运行hexo d -g报错" itemprop="url">Hexo运行hexo d -g报错</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="qin" target="_blank" itemprop="author">qin</a>
-		
-  <p class="article-time">
-    <time datetime="2017-07-30T11:10:35.000Z" itemprop="datePublished"> 发表于 2017-07-30</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><img src="img/pusherror.png" alt="remote: error: GH007: Your push would publish a private email address"><br></p>
-<h2 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h2><pre><code>1. 登录GitHub，打开Settings &gt; Emails，或者打开https://github.com/settings/emails
-2. 选择Keep my email address private
-3. 取消选择Block command line pushes that expose my email
-</code></pre><p><img src="img/setemail.png" alt=""></p>
-<p>重新运行<code>hexo d -g</code> ok</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/其他/">其他</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/hexo/">hexo</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
 	
-</div>
-
-</footer>
 
 
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -433,8 +336,36 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
   });
 });
 </script>
@@ -509,4 +440,4 @@ var _hmt = _hmt || [];
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
