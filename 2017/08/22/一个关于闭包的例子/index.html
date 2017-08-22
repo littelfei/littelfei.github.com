@@ -4,28 +4,25 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hexo运行hexo d -g报错 | Littelfei&#39;s Blog</title>
+    <title>一个关于闭包的例子 | Littelfei&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="qin">
     
 
     
-    <meta name="description" content="解决办法：1. 登录GitHub，打开Settings &amp;gt; Emails，或者打开https://github.com/settings/emails 2. 选择Keep my email address private 3. 取消选择Block command line pushes that expose my email  重新运行hexo d -g ok">
-<meta name="keywords" content="hexo">
+    <meta name="description" content="查看解析123456&amp;lt;ul&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt; 运行如下代码：1234567var elements=document.">
+<meta name="keywords" content="闭包">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo运行hexo d -g报错">
-<meta property="og:url" content="http://littelfei.github.io/2017/07/30/hexo-2017-7-30/index.html">
+<meta property="og:title" content="一个关于闭包的例子">
+<meta property="og:url" content="http://littelfei.github.io/2017/08/22/一个关于闭包的例子/index.html">
 <meta property="og:site_name" content="Littelfei&#39;s Blog">
-<meta property="og:description" content="解决办法：1. 登录GitHub，打开Settings &amp;gt; Emails，或者打开https://github.com/settings/emails 2. 选择Keep my email address private 3. 取消选择Block command line pushes that expose my email  重新运行hexo d -g ok">
+<meta property="og:description" content="查看解析123456&amp;lt;ul&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt; 运行如下代码：1234567var elements=document.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://littelfei.github.io/2017/07/30/hexo-2017-7-30/img/pusherror.png">
-<meta property="og:image" content="http://littelfei.github.io/2017/07/30/hexo-2017-7-30/img/setemail.png">
-<meta property="og:updated_time" content="2017-08-13T13:24:46.496Z">
+<meta property="og:updated_time" content="2017-08-22T13:28:04.667Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo运行hexo d -g报错">
-<meta name="twitter:description" content="解决办法：1. 登录GitHub，打开Settings &amp;gt; Emails，或者打开https://github.com/settings/emails 2. 选择Keep my email address private 3. 取消选择Block command line pushes that expose my email  重新运行hexo d -g ok">
-<meta name="twitter:image" content="http://littelfei.github.io/2017/07/30/hexo-2017-7-30/img/pusherror.png">
+<meta name="twitter:title" content="一个关于闭包的例子">
+<meta name="twitter:description" content="查看解析123456&amp;lt;ul&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt; 运行如下代码：1234567var elements=document.">
 
     
     <link rel="alternative" href="/atom.xml" title="Littelfei&#39;s Blog" type="application/atom+xml">
@@ -85,14 +82,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/07/30/hexo-2017-7-30/" title="Hexo运行hexo d -g报错" itemprop="url">Hexo运行hexo d -g报错</a>
+      <a href="/2017/08/22/一个关于闭包的例子/" title="一个关于闭包的例子" itemprop="url">一个关于闭包的例子</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="qin" target="_blank" itemprop="author">qin</a>
 		
   <p class="article-time">
-    <time datetime="2017-07-30T11:10:35.000Z" itemprop="datePublished"> 发表于 2017-07-30</time>
+    <time datetime="2017-08-22T13:21:15.000Z" itemprop="datePublished"> 发表于 2017-08-22</time>
     
   </p>
 </header>
@@ -101,16 +98,21 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解决办法："><span class="toc-number">1.</span> <span class="toc-text">解决办法：</span></a></li></ol>
+			
 		
 		</div>
 		
-		<p><img src="img/pusherror.png" alt="remote: error: GH007: Your push would publish a private email address"><br></p>
-<h2 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h2><pre><code>1. 登录GitHub，打开Settings &gt; Emails，或者打开https://github.com/settings/emails
-2. 选择Keep my email address private
-3. 取消选择Block command line pushes that expose my email
-</code></pre><p><img src="img/setemail.png" alt=""></p>
-<p>重新运行<code>hexo d -g</code> ok</p>
+		<p>查看解析<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>click me<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>click me<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>click me<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>click me<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>运行如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> elements=<span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</div><div class="line"><span class="keyword">var</span> length=elements.length;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;length;i++)&#123;</div><div class="line">    elements[i].onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(i);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>依次点击4个li标签，输出结果：4 4 4 4</p>
+<blockquote>
+<p><strong>答案解析：</strong>elements[i].onclick=function(){alert(i);}是一个<code>闭包</code>函数,<code>闭包</code>允许内层函数引用父函数中的变量，但是该变量是最终值.这里的闭包函数的作用域中保存着闭包的活动对象(这里为空)和全局变量对象(主要是i),所以它们引用的是同一变量i;当点击完成后,变量i=4,也就是每个内部函数i的值都是4.</p>
+</blockquote>
+<p>可以通过创建另一个匿名函数强制让闭包的行为符合预期：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> elements=<span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</div><div class="line"><span class="keyword">var</span> length=elements.length;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;length;i++)&#123;</div><div class="line">    elements[i].onclick=<span class="function"><span class="keyword">function</span>(<span class="params">num</span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(num);</div><div class="line">        &#125;;</div><div class="line">    &#125;(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>输出结果：0 1 2 3</p>
+<blockquote>
+<p>在调用匿名函数是,我们传入变量i,由于参数是按值传递的,所以就会将变量i的当前值复制给参数num.而这个匿名函数内部又创建并输出了一个访问num的闭包.这样,每一次点击都有num变量的一个副本,因此可以返回各自不同的值.</p>
+</blockquote>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -118,13 +120,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/其他/">其他</a>
+  <a class="article-category-link" href="/categories/javascript/">javascript</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/hexo/">hexo</a>
+  <span></span> <a href="/tags/闭包/">闭包</a>
   </div>
 
 </div>
@@ -168,14 +170,14 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/08/13/JavaScript事件委派/" title="JavaScript事件委派">
-  <strong>上一篇：</strong><br/>
-  <span>
-  JavaScript事件委派</span>
+
+<div class="next">
+<a href="/2017/08/19/CSS书写顺序/"  title="CSS书写顺序">
+ <strong>下一篇：</strong><br/> 
+ <span>CSS书写顺序
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -188,7 +190,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解决办法："><span class="toc-number">1.</span> <span class="toc-text">解决办法：</span></a></li></ol>
+ 
  
   </div>
 
