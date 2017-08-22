@@ -11,18 +11,18 @@
     
 
     
-    <meta name="description" content="事件委派的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素。  一个简单的例子：给ul中的li添加点击事件  12345678910111213141516&amp;lt;ul id=&quot;list&quot; style=&quot;width:200px;border: 1px solid red;&quot;&amp;gt;    &amp;lt;li&amp;gt;1111&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;22">
+    <meta name="description" content="事件委派的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素。  一个简单的例子：给ul中的li添加点击事件  &amp;lt;ul id=&amp;quot;list&amp;quot; style=&amp;quot;width:200px;border: 1px solid red;&amp;quot;&amp;gt;     &amp;lt;li&amp;gt;1111&amp;lt;/li&amp;gt;     &amp;lt;li&amp;gt;222">
 <meta name="keywords" content="事件委派">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript事件委派">
 <meta property="og:url" content="http://littelfei.github.io/2017/08/13/JavaScript事件委派/index.html">
 <meta property="og:site_name" content="Littelfei&#39;s Blog">
-<meta property="og:description" content="事件委派的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素。  一个简单的例子：给ul中的li添加点击事件  12345678910111213141516&amp;lt;ul id=&quot;list&quot; style=&quot;width:200px;border: 1px solid red;&quot;&amp;gt;    &amp;lt;li&amp;gt;1111&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;22">
+<meta property="og:description" content="事件委派的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素。  一个简单的例子：给ul中的li添加点击事件  &amp;lt;ul id=&amp;quot;list&amp;quot; style=&amp;quot;width:200px;border: 1px solid red;&amp;quot;&amp;gt;     &amp;lt;li&amp;gt;1111&amp;lt;/li&amp;gt;     &amp;lt;li&amp;gt;222">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-08-22T13:34:03.341Z">
+<meta property="og:updated_time" content="2017-08-22T13:42:45.478Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript事件委派">
-<meta name="twitter:description" content="事件委派的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素。  一个简单的例子：给ul中的li添加点击事件  12345678910111213141516&amp;lt;ul id=&quot;list&quot; style=&quot;width:200px;border: 1px solid red;&quot;&amp;gt;    &amp;lt;li&amp;gt;1111&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;22">
+<meta name="twitter:description" content="事件委派的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素。  一个简单的例子：给ul中的li添加点击事件  &amp;lt;ul id=&amp;quot;list&amp;quot; style=&amp;quot;width:200px;border: 1px solid red;&amp;quot;&amp;gt;     &amp;lt;li&amp;gt;1111&amp;lt;/li&amp;gt;     &amp;lt;li&amp;gt;222">
 
     
     <link rel="alternative" href="/atom.xml" title="Littelfei&#39;s Blog" type="application/atom+xml">
@@ -106,7 +106,16 @@
 <blockquote>
 <p>一个简单的例子：给ul中的li添加点击事件</p>
 </blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"list"</span> <span class="attr">style</span>=<span class="string">"width:200px;border: 1px solid red;"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>1111<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>2222<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>3333<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>4444<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">```    </div><div class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line">&gt;传统的li点击事件</div><div class="line">```javascript</div><div class="line">var oLi = document.getElementsByTagName("li");</div><div class="line">for (var i = 0; i <span class="tag">&lt; <span class="attr">oLi.length</span>; <span class="attr">i</span>++) &#123;</span></div><div class="line"><span class="tag">    <span class="attr">oLi</span>[<span class="attr">i</span>]<span class="attr">.onclick</span> = <span class="string">function()&#123;</span></span></div><div class="line"><span class="tag">        <span class="attr">console.log</span>(<span class="attr">this.innerHTML</span>);</span></div><div class="line"><span class="tag">    &#125;</span></div><div class="line"><span class="tag">&#125;</span></div></pre></td></tr></table></figure>
+<pre><code>&lt;ul id=&quot;list&quot; style=&quot;width:200px;border: 1px solid red;&quot;&gt;
+    &lt;li&gt;1111&lt;/li&gt;
+    &lt;li&gt;2222&lt;/li&gt;
+    &lt;li&gt;3333&lt;/li&gt;
+    &lt;li&gt;4444&lt;/li&gt;
+&lt;/ul&gt;   
+</code></pre><p><br></p>
+<blockquote>
+<p>传统的li点击事件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> oLi = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"li"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; oLi.length; i++) &#123;</div><div class="line">    oLi[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.innerHTML);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
 <p><br></p>
 <blockquote>
 <p>利用事件委派方法添加点击事件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> oUl = <span class="built_in">document</span>.getElementById(<span class="string">"list"</span>);</div><div class="line">        </div><div class="line">oUl.onclick = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> target = e.target || e.srcElement;</div><div class="line">    <span class="built_in">console</span>.log(target.innerHTML);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
