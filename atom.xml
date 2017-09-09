@@ -68,7 +68,7 @@
     <link href="http://littelfei.github.io/2017/08/26/%E6%94%B6%E9%9B%86%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BB%A3%E7%A0%81%E9%A2%98/"/>
     <id>http://littelfei.github.io/2017/08/26/收集的一些代码题/</id>
     <published>2017-08-26T12:15:33.000Z</published>
-    <updated>2017-08-26T13:14:44.927Z</updated>
+    <updated>2017-09-09T08:27:16.373Z</updated>
     
     <content type="html"><![CDATA[<ol>
 <li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj =&#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;alert(<span class="keyword">this</span>.a)&#125;&#125;; </div><div class="line"><span class="keyword">var</span> fun =obj.b; </div><div class="line">fun();</div></pre></td></tr></table></figure>
@@ -120,6 +120,8 @@
     
       <category term="javascript" scheme="http://littelfei.github.io/categories/javascript/"/>
     
+    
+      <category term="代码题" scheme="http://littelfei.github.io/tags/%E4%BB%A3%E7%A0%81%E9%A2%98/"/>
     
   </entry>
   
