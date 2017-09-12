@@ -3,6 +3,48 @@
   
     
     <entry>
+      <title><![CDATA[js 函数定义方式]]></title>
+      <url>/2017/09/12/js-%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E6%96%B9%E5%BC%8F/</url>
+      <content type="html"><![CDATA[<blockquote>
+<h6 id="js-函数定义方式有三种："><a href="#js-函数定义方式有三种：" class="headerlink" title="js 函数定义方式有三种："></a>js 函数定义方式有三种：</h6><ol>
+<li>函数声明语法定义：function sum(num1,num2){return num1+num2}</li>
+<li>函数表达式定义函数：var sum = function(num1,num2){return num1+num2};</li>
+<li>new Function构造函数：var sum = new Function(“num1”,”num2”,”return num1+num2”);<br>Function构造函数可以接受任意数量的参数，但最后一个参数始终被看成函数体，注意函数表达式定义函数的方法与声明其他变量时一样需要加分号。</li>
+</ol>
+</blockquote>
+<p><br></p>
+<blockquote>
+<h6 id="各种定义函数方式的区别："><a href="#各种定义函数方式的区别：" class="headerlink" title="各种定义函数方式的区别："></a>各种定义函数方式的区别：</h6><p>从技术角度上讲，使用<code>Function构造函数</code>定义函数的方式是一个<code>函数表达式</code>，但是不推荐使用这种方式定义函数，原因在于这种方式会导致解析<code>两次</code>代码，影响性能。第一次解析常规的JavaScript代码，第二次解析传入构造函数的字符串。不过，这种语法对于理解“函数是对象，函数名是指针”的概念是非常直观的。<br>对于<code>函数声明</code>和<code>函数表达式</code>两种定义函数的方式而言，<code>解析器</code>并不是一视同仁的。解析器会率<code>先读取函数声明</code>，并使其在执行任何代码之前可用（可以访问）；对于函数表达式，则必须等到解析器执行到它所在的代码行，才会真正被解释执行。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(sum(<span class="number">10</span>,<span class="number">10</span>));<span class="comment">//20    </span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1,num2</span>)</span>&#123;  </div><div class="line">    <span class="keyword">return</span> num1+num2;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上代码的运行结果为20。为什么呢？因为在代码开始执行之前，解析器就已经通过一个名为函数声明提升（function declaration hoisting）的过程，读取并将函数声明添加到执行环境中。对于代码求值时，js引擎在第一遍会声明函数并将它们放到源代码树的顶部。所以，即使声明函数在调用它的代码后，js引擎也能把函数声明提升到顶部。但是，如果把上面的函数声明改成等价的函数表达式，就会在执行期间导致错误。</p>
+</blockquote>
+<p><br></p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(sum(<span class="number">10</span>,<span class="number">10</span>));<span class="comment">//Uncaught TypeError: sum is not a function   </span></div><div class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">num1,num2</span>)</span>&#123;  </div><div class="line">    <span class="keyword">return</span> num1+num2;  </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>会运行错误，因为函数位于一个初始化语句中，而不是一个函数声明。换句话说，在执行到函数所在的语句之前，变量sum中不会保存有对函数的引用；而且，第一行代码运行不通过，实际上也不会执行到下一行。</p>
+</blockquote>
+<p><br></p>
+<blockquote>
+<p>注意：有名称的函数表达式,如var sum = function add(num1,num2){return num1+num2};也属于函数表达式。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">typeof</span> foo; </div><div class="line">&#125;;</div><div class="line"><span class="keyword">typeof</span> foo; <span class="comment">// "undefined"</span></div><div class="line">f(); <span class="comment">// "function"</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="number">23</span>; </div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(f());  <span class="comment">//23</span></div><div class="line"><span class="built_in">console</span>.log(foo());  <span class="comment">//Uncaught ReferenceError: foo is not defined</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> javascript </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 函数定义方式 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[typeof的返回结果]]></title>
       <url>/2017/09/09/typeof%E7%9A%84%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C/</url>
       <content type="html"><![CDATA[<blockquote>
