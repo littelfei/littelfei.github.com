@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="Littelfei&#39;s Blog">
 <meta property="og:description" content="js 函数定义方式有三种： 函数声明语法定义：function sum(num1,num2){return num1+num2} 函数表达式定义函数：var sum = function(num1,num2){return num1+num2}; new Function构造函数：var sum = new Function(“num1”,”num2”,”return num1+num2”);F">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-12T14:45:11.925Z">
+<meta property="og:updated_time" content="2017-10-05T07:37:42.022Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js 函数定义方式">
 <meta name="twitter:description" content="js 函数定义方式有三种： 函数声明语法定义：function sum(num1,num2){return num1+num2} 函数表达式定义函数：var sum = function(num1,num2){return num1+num2}; new Function构造函数：var sum = new Function(“num1”,”num2”,”return num1+num2”);F">
@@ -117,7 +117,7 @@
 <p><br></p>
 <blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(sum(<span class="number">10</span>,<span class="number">10</span>));<span class="comment">//Uncaught TypeError: sum is not a function   </span></div><div class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">num1,num2</span>)</span>&#123;  </div><div class="line">    <span class="keyword">return</span> num1+num2;  </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p>会运行错误，因为函数位于一个初始化语句中，而不是一个函数声明。换句话说，在执行到函数所在的语句之前，变量sum中不会保存有对函数的引用；而且，第一行代码运行不通过，实际上也不会执行到下一行。</p>
+<p>以上代码会运行错误，因为函数位于一个初始化语句中，而不是一个函数声明。换句话说，在执行到函数所在的语句之前，变量sum中不会保存有对函数的引用；而且，第一行代码运行不通过，实际上也不会执行到下一行。</p>
 </blockquote>
 <p><br></p>
 <blockquote>

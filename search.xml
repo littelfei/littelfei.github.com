@@ -21,7 +21,7 @@
 <p><br></p>
 <blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(sum(<span class="number">10</span>,<span class="number">10</span>));<span class="comment">//Uncaught TypeError: sum is not a function   </span></div><div class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">num1,num2</span>)</span>&#123;  </div><div class="line">    <span class="keyword">return</span> num1+num2;  </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p>会运行错误，因为函数位于一个初始化语句中，而不是一个函数声明。换句话说，在执行到函数所在的语句之前，变量sum中不会保存有对函数的引用；而且，第一行代码运行不通过，实际上也不会执行到下一行。</p>
+<p>以上代码会运行错误，因为函数位于一个初始化语句中，而不是一个函数声明。换句话说，在执行到函数所在的语句之前，变量sum中不会保存有对函数的引用；而且，第一行代码运行不通过，实际上也不会执行到下一行。</p>
 </blockquote>
 <p><br></p>
 <blockquote>

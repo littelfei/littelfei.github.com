@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://littelfei.github.io/"/>
-  <updated>2017-09-12T14:45:11.925Z</updated>
+  <updated>2017-10-05T07:37:42.022Z</updated>
   <id>http://littelfei.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://littelfei.github.io/2017/09/12/js-%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E6%96%B9%E5%BC%8F/"/>
     <id>http://littelfei.github.io/2017/09/12/js-函数定义方式/</id>
     <published>2017-09-12T14:36:51.000Z</published>
-    <updated>2017-09-12T14:45:11.925Z</updated>
+    <updated>2017-10-05T07:37:42.022Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <h6 id="js-函数定义方式有三种："><a href="#js-函数定义方式有三种：" class="headerlink" title="js 函数定义方式有三种："></a>js 函数定义方式有三种：</h6><ol>
@@ -38,7 +38,7 @@
 <p><br></p>
 <blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(sum(<span class="number">10</span>,<span class="number">10</span>));<span class="comment">//Uncaught TypeError: sum is not a function   </span></div><div class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">num1,num2</span>)</span>&#123;  </div><div class="line">    <span class="keyword">return</span> num1+num2;  </div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p>会运行错误，因为函数位于一个初始化语句中，而不是一个函数声明。换句话说，在执行到函数所在的语句之前，变量sum中不会保存有对函数的引用；而且，第一行代码运行不通过，实际上也不会执行到下一行。</p>
+<p>以上代码会运行错误，因为函数位于一个初始化语句中，而不是一个函数声明。换句话说，在执行到函数所在的语句之前，变量sum中不会保存有对函数的引用；而且，第一行代码运行不通过，实际上也不会执行到下一行。</p>
 </blockquote>
 <p><br></p>
 <blockquote>
