@@ -3,6 +3,30 @@
   
     
     <entry>
+      <title><![CDATA[undefined和null]]></title>
+      <url>/2017/10/09/undefined%E5%92%8Cnull/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>undefined和null与任何有意义的值比较返回的都是false，但是null与undefined之间互相比较返回的是true。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">false</span>); <span class="comment">//false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">true</span>);  <span class="comment">//false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span> == <span class="literal">false</span>);  <span class="comment">//false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span> == <span class="literal">true</span>);  <span class="comment">//false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span> == <span class="literal">null</span>);   <span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span> == <span class="literal">undefined</span>);  <span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">null</span>);  <span class="comment">//true</span></div></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> javascript </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> undefined null </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[js 函数定义方式]]></title>
       <url>/2017/09/12/js-%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E6%96%B9%E5%BC%8F/</url>
       <content type="html"><![CDATA[<blockquote>

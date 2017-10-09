@@ -4,28 +4,25 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hexo运行hexo d -g报错 | Littelfei&#39;s Blog</title>
+    <title>undefined和null | Littelfei&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="qin">
     
 
     
-    <meta name="description" content="解决办法：1. 登录GitHub，打开Settings &amp;gt; Emails，或者打开https://github.com/settings/emails 2. 选择Keep my email address private 3. 取消选择Block command line pushes that expose my email  重新运行hexo d -g ok">
-<meta name="keywords" content="hexo">
+    <meta name="description" content="undefined和null与任何有意义的值比较返回的都是false，但是null与undefined之间互相比较返回的是true。  1234567console.log(null == false); //falseconsole.log(null == true);  //falseconsole.log(undefined == false);  //falseconsole.log(u">
+<meta name="keywords" content="undefined null">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo运行hexo d -g报错">
-<meta property="og:url" content="http://littelfei.github.io/2017/07/30/hexo-2017-7-30/index.html">
+<meta property="og:title" content="undefined和null">
+<meta property="og:url" content="http://littelfei.github.io/2017/10/09/undefined和null/index.html">
 <meta property="og:site_name" content="Littelfei&#39;s Blog">
-<meta property="og:description" content="解决办法：1. 登录GitHub，打开Settings &amp;gt; Emails，或者打开https://github.com/settings/emails 2. 选择Keep my email address private 3. 取消选择Block command line pushes that expose my email  重新运行hexo d -g ok">
+<meta property="og:description" content="undefined和null与任何有意义的值比较返回的都是false，但是null与undefined之间互相比较返回的是true。  1234567console.log(null == false); //falseconsole.log(null == true);  //falseconsole.log(undefined == false);  //falseconsole.log(u">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://littelfei.github.io/2017/07/30/hexo-2017-7-30/img/pusherror.png">
-<meta property="og:image" content="http://littelfei.github.io/2017/07/30/hexo-2017-7-30/img/setemail.png">
-<meta property="og:updated_time" content="2017-08-13T13:24:46.496Z">
+<meta property="og:updated_time" content="2017-10-09T07:10:31.389Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo运行hexo d -g报错">
-<meta name="twitter:description" content="解决办法：1. 登录GitHub，打开Settings &amp;gt; Emails，或者打开https://github.com/settings/emails 2. 选择Keep my email address private 3. 取消选择Block command line pushes that expose my email  重新运行hexo d -g ok">
-<meta name="twitter:image" content="http://littelfei.github.io/2017/07/30/hexo-2017-7-30/img/pusherror.png">
+<meta name="twitter:title" content="undefined和null">
+<meta name="twitter:description" content="undefined和null与任何有意义的值比较返回的都是false，但是null与undefined之间互相比较返回的是true。  1234567console.log(null == false); //falseconsole.log(null == true);  //falseconsole.log(undefined == false);  //falseconsole.log(u">
 
     
     <link rel="alternative" href="/atom.xml" title="Littelfei&#39;s Blog" type="application/atom+xml">
@@ -85,14 +82,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/07/30/hexo-2017-7-30/" title="Hexo运行hexo d -g报错" itemprop="url">Hexo运行hexo d -g报错</a>
+      <a href="/2017/10/09/undefined和null/" title="undefined和null" itemprop="url">undefined和null</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="qin" target="_blank" itemprop="author">qin</a>
 		
   <p class="article-time">
-    <time datetime="2017-07-30T11:10:35.000Z" itemprop="datePublished"> 发表于 2017-07-30</time> 
+    <time datetime="2017-10-09T07:06:45.000Z" itemprop="datePublished"> 发表于 2017-10-09</time> 
   </p>
 </header>
 	<div class="article-content">
@@ -100,16 +97,14 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解决办法："><span class="toc-number">1.</span> <span class="toc-text">解决办法：</span></a></li></ol>
+			
 		
 		</div>
 		
-		<p><img src="img/pusherror.png" alt="remote: error: GH007: Your push would publish a private email address"><br></p>
-<h2 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h2><pre><code>1. 登录GitHub，打开Settings &gt; Emails，或者打开https://github.com/settings/emails
-2. 选择Keep my email address private
-3. 取消选择Block command line pushes that expose my email
-</code></pre><p><img src="img/setemail.png" alt=""></p>
-<p>重新运行<code>hexo d -g</code> ok</p>
+		<blockquote>
+<p>undefined和null与任何有意义的值比较返回的都是false，但是null与undefined之间互相比较返回的是true。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">false</span>); <span class="comment">//false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">true</span>);  <span class="comment">//false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span> == <span class="literal">false</span>);  <span class="comment">//false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span> == <span class="literal">true</span>);  <span class="comment">//false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span> == <span class="literal">null</span>);   <span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span> == <span class="literal">undefined</span>);  <span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">null</span>);  <span class="comment">//true</span></div></pre></td></tr></table></figure>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -117,13 +112,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/其他/">其他</a>
+  <a class="article-category-link" href="/categories/javascript/">javascript</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/hexo/">hexo</a>
+  <span></span> <a href="/tags/undefined-null/">undefined null</a>
   </div>
 
 </div>
@@ -167,14 +162,14 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/08/13/JavaScript事件委派/" title="JavaScript事件委派">
-  <strong>上一篇：</strong><br/>
-  <span>
-  JavaScript事件委派</span>
+
+<div class="next">
+<a href="/2017/09/12/js-函数定义方式/"  title="js 函数定义方式">
+ <strong>下一篇：</strong><br/> 
+ <span>js 函数定义方式
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -187,7 +182,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解决办法："><span class="toc-number">1.</span> <span class="toc-text">解决办法：</span></a></li></ol>
+ 
  
   </div>
 
