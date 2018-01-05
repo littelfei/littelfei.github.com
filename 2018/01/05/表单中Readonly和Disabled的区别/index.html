@@ -4,25 +4,25 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>一个关于闭包的例子 | Littelfei&#39;s Blog</title>
+    <title>表单中Readonly和Disabled的区别 | Littelfei&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="qin">
     
 
     
-    <meta name="description" content="查看解析123456&amp;lt;ul&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt; 运行如下代码：1234567var elements=document.">
-<meta name="keywords" content="闭包">
+    <meta name="description" content="Readonly和Disabled它们都能够做到使用户不能够更改表单域中的内容。但是它们之间有着微小的差别，总结如下：  Readonly只针对input(text / password)和textarea有效，而disabled对于所有的表单元素都有效，但是表单元素在使用了disabled后，当我们将表单以POST或GET的方式提交的话，这个元素的值不会被传递出去，而readonly会将该值传递">
+<meta name="keywords" content="Readonly,Disabled">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一个关于闭包的例子">
-<meta property="og:url" content="http://littelfei.github.io/2017/08/22/一个关于闭包的例子/index.html">
+<meta property="og:title" content="表单中Readonly和Disabled的区别">
+<meta property="og:url" content="http://littelfei.github.io/2018/01/05/表单中Readonly和Disabled的区别/index.html">
 <meta property="og:site_name" content="Littelfei&#39;s Blog">
-<meta property="og:description" content="查看解析123456&amp;lt;ul&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt; 运行如下代码：1234567var elements=document.">
+<meta property="og:description" content="Readonly和Disabled它们都能够做到使用户不能够更改表单域中的内容。但是它们之间有着微小的差别，总结如下：  Readonly只针对input(text / password)和textarea有效，而disabled对于所有的表单元素都有效，但是表单元素在使用了disabled后，当我们将表单以POST或GET的方式提交的话，这个元素的值不会被传递出去，而readonly会将该值传递">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-28T13:09:57.015Z">
+<meta property="og:updated_time" content="2018-01-05T16:13:29.117Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一个关于闭包的例子">
-<meta name="twitter:description" content="查看解析123456&amp;lt;ul&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;    &amp;lt;li&amp;gt;click me&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt; 运行如下代码：1234567var elements=document.">
+<meta name="twitter:title" content="表单中Readonly和Disabled的区别">
+<meta name="twitter:description" content="Readonly和Disabled它们都能够做到使用户不能够更改表单域中的内容。但是它们之间有着微小的差别，总结如下：  Readonly只针对input(text / password)和textarea有效，而disabled对于所有的表单元素都有效，但是表单元素在使用了disabled后，当我们将表单以POST或GET的方式提交的话，这个元素的值不会被传递出去，而readonly会将该值传递">
 
     
     <link rel="alternative" href="/atom.xml" title="Littelfei&#39;s Blog" type="application/atom+xml">
@@ -82,14 +82,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/08/22/一个关于闭包的例子/" title="一个关于闭包的例子" itemprop="url">一个关于闭包的例子</a>
+      <a href="/2018/01/05/表单中Readonly和Disabled的区别/" title="表单中Readonly和Disabled的区别" itemprop="url">表单中Readonly和Disabled的区别</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="qin" target="_blank" itemprop="author">qin</a>
 		
   <p class="article-time">
-    <time datetime="2017-08-22T13:21:15.000Z" itemprop="datePublished"> 发表于 2017-08-22</time> 
+    <time datetime="2018-01-05T15:57:31.000Z" itemprop="datePublished"> 发表于 2018-01-05</time> 
   </p>
 </header>
 	<div class="article-content">
@@ -101,15 +101,24 @@
 		
 		</div>
 		
-		<p>查看解析<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>click me<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>click me<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>click me<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>click me<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>运行如下代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> elements=<span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</div><div class="line"><span class="keyword">var</span> length=elements.length;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;length;i++)&#123;</div><div class="line">    elements[i].onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(i);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>依次点击4个li标签，输出结果：4 4 4 4</p>
+		<p>Readonly和Disabled它们都能够做到使用户不能够更改表单域中的内容。但是它们之间有着微小的差别，总结如下：</p>
 <blockquote>
-<p><strong>答案解析：</strong>elements[i].onclick=function(){alert(i);}是一个<code>闭包</code>函数,<code>闭包</code>允许内层函数引用父函数中的变量,但是该变量是最终值.这里的闭包函数的作用域中保存着闭包的活动对象(这里为空)和全局变量对象(主要是i),所以它们引用的是同一变量i;当点击完成后,变量i=4,也就是每个内部函数i的值都是4.<br><br><br>可以通过创建另一个匿名函数强制让闭包的行为符合预期：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> elements=<span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</div><div class="line"><span class="keyword">var</span> length=elements.length;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;length;i++)&#123;</div><div class="line">    elements[i].onclick=<span class="function"><span class="keyword">function</span>(<span class="params">num</span>)</span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(num);</div><div class="line">        &#125;;</div><div class="line">    &#125;(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Readonly只针对input(text / password)和textarea有效，而disabled对于所有的表单元素都有效，但是表单元素在使用了disabled后，当我们将表单以POST或GET的方式提交的话，这个元素的值不会被传递出去，而readonly会将该值传递出去（readonly接受值更改可以回传，disable接受改但不回传数据）。</p>
 </blockquote>
-<p>输出结果：0 1 2 3</p>
+<p><br><br>一般比较常用的情况是：</p>
 <blockquote>
-<p>在调用匿名函数是,我们传入变量i,由于参数是按值传递的,所以就会将变量i的当前值复制给参数num.而这个匿名函数内部又创建并输出了一个访问num的闭包.这样,每一次点击都有num变量的一个副本,因此可以返回各自不同的值.</p>
+<ol>
+<li>在某个表单中为用户预填了某个唯一识别代码，不允许用户改动，但是在提交时需要传递该值，此时应该将它的属性设置为readonly 。</li>
+<li>经常遇到当用户正式提交了表单后需要等待管理员的信息验证，这就不允许用户再更改表单中的数据，而是只能够查看，由于disabled的作用元素范围大，所以此时应该使用disabled，但同时应该注意的是要将submit button也disabled掉，否则只要用户按了这个按钮，如果在数据库操作页面中没有做完整性检测的话，数据库中的值就会被清除。如果说在这种情况下用readonly来代替disabled的话，若表单中只有input(text / password)和textarea元素，那还是可以的，如果存在其他发元素，比如select，用户可以在重新改写值后按回车键进行提交(回车是默认的submit触发按键).</li>
+<li>我们常常在用户按了提交按钮后，利用javascript将提交按钮disabled掉，这样可以防止网络条件比较差的环境下，用户反复点提交按钮导致数据冗余地存入数据库。</li>
+</ol>
+</blockquote>
+<p><br><br>disabled和readonly这两个属性有一些共同之处，比如都设为true，则form属性将不能被编辑，往往在写js代码的时候容易混合使用这两个属性，其实他们之间是有一定区别的：</p>
+<blockquote>
+<ul>
+<li>如果一个输入项的disabled设为true，则该表单输入项不能获取焦点，用户的所有操作（鼠标点击和键盘输入等）对该输入项都无效，最重要的一点是当提交表单时，这个表单输入项将不会被提交。</li>
+<li>而readonly只是针对文本输入框这类可以输入文本的输入项，如果设为true，用户只是不能编辑对应的文本，但是仍然可以聚焦焦点，并且在提交表单的时候，该输入项会作为form的一项提交。</li>
+</ul>
 </blockquote>
   
 	</div>
@@ -118,13 +127,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/javascript/">javascript</a>
+  <a class="article-category-link" href="/categories/html/">html</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/闭包/">闭包</a>
+  <span></span> <a href="/tags/Readonly/">Readonly</a><a href="/tags/Disabled/">Disabled</a>
   </div>
 
 </div>
@@ -168,19 +177,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/08/26/收集的一些代码题/" title="收集的一些代码题">
-  <strong>上一篇：</strong><br/>
-  <span>
-  收集的一些代码题</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2017/08/19/CSS书写顺序/"  title="CSS书写顺序">
+<a href="/2017/10/09/undefined和null/"  title="undefined和null">
  <strong>下一篇：</strong><br/> 
- <span>CSS书写顺序
+ <span>undefined和null
 </span>
 </a>
 </div>
