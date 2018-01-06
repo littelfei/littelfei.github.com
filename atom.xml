@@ -65,7 +65,7 @@
     <link href="http://littelfei.github.io/2017/10/09/undefined%E5%92%8Cnull/"/>
     <id>http://littelfei.github.io/2017/10/09/undefined和null/</id>
     <published>2017-10-09T07:06:45.000Z</published>
-    <updated>2017-10-09T07:36:25.463Z</updated>
+    <updated>2018-01-06T06:47:46.639Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>undefined和null与任何有意义的值比较返回的都是false，但是null与undefined之间互相比较返回的是true。</p>
@@ -85,7 +85,7 @@
       <category term="javascript" scheme="http://littelfei.github.io/categories/javascript/"/>
     
     
-      <category term="undefined     null" scheme="http://littelfei.github.io/tags/undefined-null/"/>
+      <category term="undefined" scheme="http://littelfei.github.io/tags/undefined/"/>
     
   </entry>
   
