@@ -5,11 +5,31 @@
     <entry>
       <title><![CDATA[闭包 作用域]]></title>
       <url>/2018/11/03/%E9%97%AD%E5%8C%85-%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<p><img src="img/bibao1.png" alt="在浏览器控制台执行以下代码，输出的结果是?"><br></p>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p><img src="img/explain.jpg" alt=""><br></p>
+<blockquote>
+<p>js在执行之前，会将所有带var和function的进行提前定义和声明。（带var的提前声明，function声明和定义都完成了）<br>首先，在全局作用域下，进行预解释：<br>test=xxxfff000（开辟一个堆内存，里面存的是代码字符串）<br>var result（声明一个变量result）<br>var result2(声明一个变量result2)</p>
+</blockquote>
+<hr>
+<p><strong>代码执行</strong>：</p>
+<blockquote>
+<p>result=test()  –&gt;将test执行的返回结果赋值给result，是一个对象，再开辟一个堆内存，test执行，形成一个私有作用域A<br>再进行预解释和代码执行等一系列操作<br>result2=test()  同理<br>result.add()  –&gt;方法执行形成一个私有作用域<br>n++  顺着作用域链向上寻找到test作用域A（A这个作用域不销毁，因为被全局变量result占用了）中的n为4399，n++ 》4400<br>（这时test这个作用域A下的n变成4400）</p>
+</blockquote>
+<p><strong>(1)   console.log(n)  //4400</strong>   </p>
+<blockquote>
+<p>result.add()   –&gt;方法执行形成一个新的私有作用域<br>n++  顺着作用域链向上寻找到test作用域（A）中的n为4400，n++ 》4401</p>
+</blockquote>
+<p><strong>(2)   console.log(n)  //4401</strong>  </p>
+<p><strong>(3)   console.log(result.n)  //4399</strong></p>
+<blockquote>
+<p>此时找的只是result对应的那个堆内存中的n<br>result2.add()  –&gt;方法执行形成一个私有作用域<br>n++ 顺着作用域链向上寻找到test作用域（B）中的n为4399，n++ 》4400</p>
+</blockquote>
+<p><strong>(4)   console.log(n)  //4400 </strong></p>
+]]></content>
       
         <categories>
             
-            <category> html </category>
+            <category> javascript </category>
             
         </categories>
         

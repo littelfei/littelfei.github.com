@@ -11,15 +11,21 @@
     
 
     
-    <meta name="keywords" content="闭包,作用域">
+    <meta name="description" content="解析  js在执行之前，会将所有带var和function的进行提前定义和声明。（带var的提前声明，function声明和定义都完成了）首先，在全局作用域下，进行预解释：test=xxxfff000（开辟一个堆内存，里面存的是代码字符串）var result（声明一个变量result）var result2(声明一个变量result2)   代码执行：  result=test()  –&amp;gt">
+<meta name="keywords" content="闭包,作用域">
 <meta property="og:type" content="article">
 <meta property="og:title" content="闭包 作用域">
 <meta property="og:url" content="http://littelfei.github.io/2018/11/03/闭包-作用域/index.html">
 <meta property="og:site_name" content="Littelfei&#39;s Blog">
+<meta property="og:description" content="解析  js在执行之前，会将所有带var和function的进行提前定义和声明。（带var的提前声明，function声明和定义都完成了）首先，在全局作用域下，进行预解释：test=xxxfff000（开辟一个堆内存，里面存的是代码字符串）var result（声明一个变量result）var result2(声明一个变量result2)   代码执行：  result=test()  –&amp;gt">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-03T09:49:37.176Z">
+<meta property="og:image" content="http://littelfei.github.io/2018/11/03/闭包-作用域/img/bibao1.png">
+<meta property="og:image" content="http://littelfei.github.io/2018/11/03/闭包-作用域/img/explain.jpg">
+<meta property="og:updated_time" content="2018-11-03T11:12:19.606Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="闭包 作用域">
+<meta name="twitter:description" content="解析  js在执行之前，会将所有带var和function的进行提前定义和声明。（带var的提前声明，function声明和定义都完成了）首先，在全局作用域下，进行预解释：test=xxxfff000（开辟一个堆内存，里面存的是代码字符串）var result（声明一个变量result）var result2(声明一个变量result2)   代码执行：  result=test()  –&amp;gt">
+<meta name="twitter:image" content="http://littelfei.github.io/2018/11/03/闭包-作用域/img/bibao1.png">
 
     
     <link rel="alternative" href="/atom.xml" title="Littelfei&#39;s Blog" type="application/atom+xml">
@@ -87,7 +93,7 @@
 		
   <p class="article-time">
     <time datetime="2018-11-03T09:48:29.000Z" itemprop="datePublished"> 发表于 2018-11-03</time> 
-    <time postupdated="2018-11-03T09:49:37.176Z" itemprop="dateModified"> 更新于 2018-11-03</time>
+    <time postupdated="2018-11-03T11:12:19.606Z" itemprop="dateModified"> 更新于 2018-11-03</time>
 
   </p>
 </header>
@@ -96,18 +102,38 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解析"><span class="toc-number">1.</span> <span class="toc-text">解析</span></a></li></ol>
 		
 		</div>
 		
-		  
+		<p><img src="img/bibao1.png" alt="在浏览器控制台执行以下代码，输出的结果是?"><br></p>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p><img src="img/explain.jpg" alt=""><br></p>
+<blockquote>
+<p>js在执行之前，会将所有带var和function的进行提前定义和声明。（带var的提前声明，function声明和定义都完成了）<br>首先，在全局作用域下，进行预解释：<br>test=xxxfff000（开辟一个堆内存，里面存的是代码字符串）<br>var result（声明一个变量result）<br>var result2(声明一个变量result2)</p>
+</blockquote>
+<hr>
+<p><strong>代码执行</strong>：</p>
+<blockquote>
+<p>result=test()  –&gt;将test执行的返回结果赋值给result，是一个对象，再开辟一个堆内存，test执行，形成一个私有作用域A<br>再进行预解释和代码执行等一系列操作<br>result2=test()  同理<br>result.add()  –&gt;方法执行形成一个私有作用域<br>n++  顺着作用域链向上寻找到test作用域A（A这个作用域不销毁，因为被全局变量result占用了）中的n为4399，n++ 》4400<br>（这时test这个作用域A下的n变成4400）</p>
+</blockquote>
+<p><strong>(1)   console.log(n)  //4400</strong>   </p>
+<blockquote>
+<p>result.add()   –&gt;方法执行形成一个新的私有作用域<br>n++  顺着作用域链向上寻找到test作用域（A）中的n为4400，n++ 》4401</p>
+</blockquote>
+<p><strong>(2)   console.log(n)  //4401</strong>  </p>
+<p><strong>(3)   console.log(result.n)  //4399</strong></p>
+<blockquote>
+<p>此时找的只是result对应的那个堆内存中的n<br>result2.add()  –&gt;方法执行形成一个私有作用域<br>n++ 顺着作用域链向上寻找到test作用域（B）中的n为4399，n++ 》4400</p>
+</blockquote>
+<p><strong>(4)   console.log(n)  //4400 </strong></p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/html/">html</a>
+  <a class="article-category-link" href="/categories/javascript/">javascript</a>
 </div>
 
 
@@ -177,7 +203,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#解析"><span class="toc-number">1.</span> <span class="toc-text">解析</span></a></li></ol>
  
   </div>
 
@@ -195,11 +221,11 @@
 		  
 		
 		  
-			<li><a href="/categories/html/" title="html">html<sup>2</sup></a></li>
+			<li><a href="/categories/html/" title="html">html<sup>1</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/javascript/" title="javascript">javascript<sup>6</sup></a></li>
+			<li><a href="/categories/javascript/" title="javascript">javascript<sup>7</sup></a></li>
 		  
 		
 		  
